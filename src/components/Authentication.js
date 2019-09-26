@@ -2,6 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Authentication extends React.Component {
+
+    state = {
+        password: '',
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
     
     render() {
 
@@ -14,7 +24,12 @@ class Authentication extends React.Component {
                             <div className="row">
                                 <div className="input-field col s12 password">
                                     <label>Username</label>
-                                    <input name="password" type="password" className="validate" />
+                                    <input name="password"
+                                           type="password" 
+                                           className="validate"
+                                           onChange={this.handleChange}
+                                           value={this.state.password} 
+                                    />
                                     <a className="waves-effect waves-light btn">Login</a>
                                 </div>
                             </div>
