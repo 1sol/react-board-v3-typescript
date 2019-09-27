@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
     render() {
@@ -32,5 +33,15 @@ class Header extends React.Component {
         );
     }
 }
+
+Header.propTypes = {
+    isLoggedIn: PropTypes.bool,
+    onLogout: PropTypes.func
+};
+ 
+Header.defaultProps = {
+    isLoggedIn: false,
+    onLogout: () => { console.error("logout function not defined");}
+};
 
 export default Header;

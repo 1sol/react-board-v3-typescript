@@ -1,14 +1,44 @@
 import React from 'react';
 import { Authentication } from 'components';
+import { connect } from 'react-redux';
+import { loginRequest } from 'actions/authentication';
 
 class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleLogin = this.handleLogin.bind(this);
+    }
+
+    handleLogin(pw) {
+        return (
+            <div>
+                <Authentication mode={true} />
+            </div>
+        );
+    }
+
     render() {
         return(
             <div>
-                <Authentication />
+                <Authentication mode={true} 
+                    onLogin={this.handleLogin}/>
             </div>
         ); 
     }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+    return {
+        status: state.authentication.login.status
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loginRequest: (pw) => {
+            return dispatch(loginRequest(pw));
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps) (Login);
