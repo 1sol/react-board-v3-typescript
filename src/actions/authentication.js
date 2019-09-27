@@ -11,11 +11,13 @@ export function loginRequest(password) {
     return (dispatch) => {
         dispatch(login());
 
-        return axios.post('/api/account/signin', { password })
+        return axios.post('/signIn', { password,
+            password: this.state.password
+        })
         .then((response) => {
-            dispatch(loginSuccess);
+            console.log(response);
         }).catch((error) => {
-            dispatch(loginFailure());
+            console.log(error);
         });
     };
 }
