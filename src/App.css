@@ -45,8 +45,8 @@ table {
 }
 
 /* Authentication */
-.nav .brand-logo {
-  font-size: 1.5rem;
+nav .brand-logo {
+  font-size: 1.6rem;
   top: 18px;
 }
 

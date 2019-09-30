@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { createHashHistory } from 'history';
+import { browserHistory } from 'react-router';
 import 'App.css';
 
 class Authentication extends React.Component {
@@ -21,11 +21,10 @@ class Authentication extends React.Component {
 
     handleLogin = () => {
         let pw = this.state.password;
-        const history = createHashHistory();
 
-        if(pw === "1234") {
+        if (pw === "1234") {
             alert("로그인 성공");
-            history.push('/');
+            browserHistory.push('/home');
         } else {
             alert("로그인 실패");
         }

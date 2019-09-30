@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { browserHistory } from 'react-router';
 
 // Router
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -17,7 +18,7 @@ const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
     <Provider store={store}>
-      <Router>
+      <Router history={browserHistory}>
         <div>
           <Route path="/" component={App}/>
           <Route path="/login" component={Login}/>
