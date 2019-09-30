@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { history } from 'react-router';
 import 'App.css';
+
+const authKey = "1234";
 
 class Authentication extends React.Component {
 
@@ -22,11 +23,12 @@ class Authentication extends React.Component {
     handleLogin = () => {
         let pw = this.state.password;
 
-        if (pw === "1234") {
+        if (pw === authKey) {
             alert("로그인 성공");
             this.props.history.push('/');
         } else {
             alert("로그인 실패");
+            return;
         }
     }
 
