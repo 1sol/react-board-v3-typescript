@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { browserHistory } from 'react-router';
+import { history } from 'react-router';
 import 'App.css';
 
 class Authentication extends React.Component {
@@ -24,7 +24,7 @@ class Authentication extends React.Component {
 
         if (pw === "1234") {
             alert("로그인 성공");
-            browserHistory.push('/home');
+            this.props.history.push('/');
         } else {
             alert("로그인 실패");
         }
@@ -58,6 +58,7 @@ class Authentication extends React.Component {
     }
 }
 
+
 Authentication.propTypes = {
     mode: PropTypes.bool,
     onLogin: PropTypes.func
@@ -68,4 +69,4 @@ Authentication.defaultProps = {
     onLogin: (pw) => { console.error("login function not defined"); },
 };
 
-export default Authentication;
+export default withRouter(Authentication);
