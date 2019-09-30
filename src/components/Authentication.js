@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { createHashHistory } from 'history';
 import 'App.css';
 
 class Authentication extends React.Component {
@@ -14,29 +15,22 @@ class Authentication extends React.Component {
         };
     }
 
-    handleChange = () => {
-        const { password } = this.state.password;
-        if(password === '1234') {
-            alert("로그인 성공");
-        } else {
-            alert("다시 로그인해주세요.");
-        }
+    handleChange = (e) => {
+        this.setState({password:e.target.value})
     }
 
     handleLogin = () => {
         let pw = this.state.password;
-                
-        this.props.onLogin(pw).then(
-            (success) => {
-                if(!success) {
-                    this.setState({
-                        password: ''
-                    });
-                }
-            }
-        );
+        const history = createHashHistory();
+
+        if(pw === "1234") {
+            alert("로그인 성공");
+            history.push('/');
+        } else {
+            alert("로그인 실패");
+        }
     }
-    
+
     render() {
 
         return (
@@ -54,7 +48,7 @@ class Authentication extends React.Component {
                                            onChange={this.handleChange}
                                            value={this.state.password} 
                                     />
-                                    <button className="waves-effect waves-light btn" onClick={this.signIn}>Login</button>
+                                    <button className="waves-effect waves-light btn" onClick={this.handleLogin}>Login</button>
                                 </div>
                             </div>
                         </div>

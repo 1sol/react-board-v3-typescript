@@ -8,18 +8,14 @@ import {
 
 /* LOGIN */
 export function loginRequest(password) {
-    return (dispatch) => {
-        dispatch(login());
-
-        return axios.post('/signIn', { password,
-            password: this.state.password
-        })
-        .then((response) => {
-            console.log(response);
-        }).catch((error) => {
-            console.log(error);
-        });
-    };
+    return axios.post('/handleLogin', { 
+        password: this.state.password
+    })
+    .then((response) => {
+        console.log(response);
+    }).catch((error) => {
+        console.log(error);    
+    });
 }
 
 export function login() {

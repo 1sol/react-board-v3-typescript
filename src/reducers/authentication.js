@@ -5,7 +5,7 @@ const initialState = {
         status: 'INIT'
     },
     status: {
-        isLoggedIn: false,
+        isLoggedIn: false
     }
 };
 

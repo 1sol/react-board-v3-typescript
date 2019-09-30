@@ -9,19 +9,22 @@ class Login extends React.Component {
         this.handleLogin = this.handleLogin.bind(this);
     }
 
-    handleLogin(pw) {
-        return (
-            <div>
-                <Authentication mode={true} />
-            </div>
-        );
+    handleLogin = (pw) => {
+        return this.props.loginRequest(pw).then(
+            () => {
+                if(this.props.status === "SUCCESS") {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        )
     }
 
     render() {
         return(
             <div>
-                <Authentication mode={true} 
-                    onLogin={this.handleLogin}/>
+                <Authentication mode={true} onLogin={this.handleLogin}/>
             </div>
         ); 
     }
