@@ -1,10 +1,14 @@
 import React from 'react';
+import { Header } from 'components';
 
 class Home extends React.Component {
-    render() {
+    render(){
+        let re = /(login|detail)/;
+        let isAuth = re.test(this.props.location.pathname);
+
         return (
             <div>
-                Home
+               {isAuth ? undefined : <Header />}
             </div>
         );
     }

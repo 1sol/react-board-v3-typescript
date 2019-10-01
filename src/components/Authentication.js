@@ -25,7 +25,7 @@ class Authentication extends React.Component {
 
         if (pw === authKey) {
             alert("로그인 성공");
-            this.props.history.push('/');
+            this.props.history.push('/home');
         } else {
             alert("로그인 실패");
             return;
