@@ -21,7 +21,7 @@ class Header extends React.Component {
 
         return (
             <nav>
-                <div className="nav-wrapper red darken-1">
+                <div className="nav-wrapper darken-1">
                     <a className="brand-logo center">NEUROPHET</a>
                     <div className="right">
                         <ul>

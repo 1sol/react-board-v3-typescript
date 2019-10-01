@@ -45,9 +45,13 @@ table {
 }
 
 /* Authentication */
+nav .nav-wrapper {
+    background-color: #DC2715;
+}
+
 nav .brand-logo {
-  font-size: 1.6rem;
-  top: 18px;
+  font-size: 1.4rem;
+  top: 20px;
 }
 
 .auth {
@@ -93,4 +97,26 @@ a {
 
 .auth .btn {
     width: 100%;
+    background-color: #DC2715;
+}
+
+/* Board */
+div .MuiFab-root:hover {
+    background-color: #ca2413;
+}
+
+div .MuiFab-root {
+    float: right;
+    width: 35px;
+    height: 20px;
+    background-color: #DC2715;
+    color: #fff;
+}
+
+div .MuiTable-root tbody tr {
+    cursor: pointer;
+}
+
+div .MuiTable-root tbody tr:last-child {
+    border-bottom: none;
 }

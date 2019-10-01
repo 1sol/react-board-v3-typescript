@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from 'components';
+import { Header, Board } from 'components';
 
 class Home extends React.Component {
     render(){
@@ -9,7 +9,7 @@ class Home extends React.Component {
         return (
             <div>
                {isAuth ? undefined : <Header />}
-               <h1>home</h1>
+               <Board />
             </div>
         );
     }
