@@ -11,6 +11,7 @@ class Authentication extends React.Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this);
         this.state = {
             password: ''
         };
@@ -32,6 +33,16 @@ class Authentication extends React.Component {
         }
     }
 
+    handleKeyPress(e) {
+        if(e.charCode == 13) {
+            if(this.props.mode) {
+                this.handleLogin();
+            } else {
+                return;
+            }
+        }
+    }
+
     render() {
 
         return (
@@ -47,7 +58,8 @@ class Authentication extends React.Component {
                                            type="password" 
                                            className="validate"
                                            onChange={this.handleChange}
-                                           value={this.state.password} 
+                                           value={this.state.password}
+                                           onKeyPress={this.handleKeyPress}
                                     />
                                     <button className="waves-effect waves-light btn" onClick={this.handleLogin}>Login</button>
                                 </div>

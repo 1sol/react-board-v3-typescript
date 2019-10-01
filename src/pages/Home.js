@@ -9,6 +9,7 @@ class Home extends React.Component {
         return (
             <div>
                {isAuth ? undefined : <Header />}
+               <h1>home</h1>
             </div>
         );
     }
