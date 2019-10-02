@@ -1,5 +1,4 @@
 import React from 'react';
-import { Header } from 'components';
 import { Header, Board } from 'components';
 
 class Home extends React.Component {

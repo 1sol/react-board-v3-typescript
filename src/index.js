@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Container Components
-import { Home, App, Login, Detail } from './pages';
+import { Home, App, Login, Detail, Details } from './pages';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -23,7 +23,8 @@ ReactDOM.render(
           <Route exact path="/" component={App}/>
           <Route exact path="/home" component={Home}/>
           <Route exact path="/login" component={Login}/>
-          <Route path="/detail" component={Detail}/>
+          <Route path="/detail" component={Details}/>
+          <Route path="/detail/:id" component={Detail}/>
         </div>
       </Router>
     </Provider>
