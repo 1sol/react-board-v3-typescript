@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Detail = ({params}) => {
-    return (
-        <div>
-            <h1>{params.id}</h1>
-        </div>
-    ); 
+class Detail extends React.Component {
+    render() {
+        return (
+            <div>
+                Detail
+            </div>
+        );
+    }
 }
 
 export default Detail;

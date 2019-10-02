@@ -51,7 +51,7 @@ export default function SimpleTable() {
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.name} hover role="checkbox" Link to="/detail/1">
+            <TableRow key={row.name} hover role="checkbox">
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
