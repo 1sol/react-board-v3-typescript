@@ -1,5 +1,5 @@
 import Header from './Header';
 import Authentication from './Authentication';
-import BoardList from './BoardList';
+import Board from './Board'
 
-export { Header, Authentication, BoardList };
+export { Header, Authentication, Board };
