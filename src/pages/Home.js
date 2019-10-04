@@ -1,8 +1,8 @@
 import React from 'react';
-import { Header, Board } from 'components';
+import { Header } from 'components';
+import { Board } from './';
 
 class Home extends React.Component {
-
     render(){
         let re = /(login|detail)/;
         let isAuth = re.test(this.props.location.pathname);
@@ -10,11 +10,10 @@ class Home extends React.Component {
         return (
             <div>
                {isAuth ? undefined : <Header />}
-               <Board />
+               <Board/>
             </div>
         );
     }
 }
-
 
 export default Home;
