@@ -9,7 +9,7 @@ export const create = createAction(CREATE);
 export const modify = createAction(MODIFY);
 export const remove = createAction(REMOVE);
 
-export const initialState = List([
+export const memberList = List([
     Map({
         id: 0,
         name: 'Jake, JunKil Been',
@@ -50,4 +50,4 @@ export default handleActions(
             return state.delete(index);
         }
     }, 
-initialState);
+memberList);

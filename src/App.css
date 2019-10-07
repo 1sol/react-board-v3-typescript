@@ -101,14 +101,42 @@ a {
 }
 
 /* Board */
-.MuiTableHead-root .MuiFab-secondary {
+.MuiTableBody-root .MuiTableRow-hover {
+    cursor: pointer;
+}
+
+.board-container {
+    width: 75%;
+    margin: 2rem auto;
+    overflow-x: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.btn-red {
     background-color: #DC2715;
 }
 
-.MuiTableHead-root .MuiFab-secondary:hover {
+.btn-add {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: #DC2715;
+    color: #fff;
+}
+
+.btn-add:hover {
     background-color: #c72313;
 }
 
-.MuiTableBody-root .MuiTableRow-hover {
-    cursor: pointer;
+/* modal */
+.MuiDialog-paperWidthSm {
+    width: 400px;
+}
+
+div .modal-btn-wrap {
+    margin: 0 auto;
+    padding: 8px 8px 15px 8px;
 }

@@ -9,7 +9,7 @@ export const show = createAction(SHOW);
 export const hide = createAction(HIDE);
 export const change = createAction(CHANGE);
 
-const initialState = Map({
+const memberList = Map({
     visible: false,
     mode: null,
     member: Map({
@@ -22,7 +22,7 @@ const initialState = Map({
 
 export default handleActions({
     [SHOW]: (state, action) => {
-        const { mode, board } = action.payload;
+        const { mode, member } = action.payload;
 
         return state.set('visible', true)
                     .set('mode', mode)
@@ -34,4 +34,4 @@ export default handleActions({
 
         return state.setIn(['member', name], value);
     }
-}, initialState)
+}, memberList)

@@ -5,7 +5,7 @@ const SET_VIEW = 'base/SET_VIEW';
 
 export const setView = createAction(SET_VIEW);
 
-const initialState = Map({
+const memberList = Map({
     keyword: '',
     view: 'list'
 });
@@ -13,4 +13,4 @@ const initialState = Map({
 export default handleActions({
     [CHANGE_SEARCH]: (state, action) => state.set('keyword', action.payload),
     [SET_VIEW]: (state, action) => state.set('view', action.payload)
-}, initialState);
+}, memberList);s
