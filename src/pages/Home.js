@@ -10,7 +10,7 @@ class Home extends React.Component {
         return (
             <div>
                {isAuth ? undefined : <Header />}
-               <Board/>
+               <Board />
             </div>
         );
     }
