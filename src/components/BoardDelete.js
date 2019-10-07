@@ -7,6 +7,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 // import memberList from '../store/modules/member';
 
+const authKey = "1234";
+
 class BoardDelete extends React.Component {
     constructor(props) {
         super(props);
@@ -30,7 +32,7 @@ class BoardDelete extends React.Component {
         });
     }
 
-    handleRemove = id => {
+    handleRemove = () => {
         this.setState({
             // memberList: memberList.filter(id !== id)
         });

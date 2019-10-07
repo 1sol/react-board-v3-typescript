@@ -50,7 +50,7 @@ class Authentication extends React.Component {
                 <div className="card login-wrap">
                     <div className="header white center">
                         <div className="card-content">
-                          <Link className="logo" to="/"><img src="https://static.wixstatic.com/media/dae33f_0a4669f3e2cf4334a8c57ab55008795b~mv2.png/v1/fill/w_205,h_42,al_c,lg_1,q_80/%EC%9E%90%EC%82%B0%2048.webp" /></Link>
+                          <Link className="logo" to="/"><img src="https://static.wixstatic.com/media/dae33f_0a4669f3e2cf4334a8c57ab55008795b~mv2.png/v1/fill/w_205,h_42,al_c,lg_1,q_80/%EC%9E%90%EC%82%B0%2048.webp"/></Link>
                             <div className="row">
                                 <div className="input-field col s12 password">
                                     <label>Password</label>

@@ -13,4 +13,4 @@ const memberList = Map({
 export default handleActions({
     [CHANGE_SEARCH]: (state, action) => state.set('keyword', action.payload),
     [SET_VIEW]: (state, action) => state.set('view', action.payload)
-}, memberList);s
+}, memberList);
