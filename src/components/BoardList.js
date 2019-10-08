@@ -5,7 +5,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
-import { memberList } from '../store/modules/member';
+import { memberList } from '../stores/modules/member';
 import 'App.css';
 import { BoardAdd } from '.';
 import BoardDelete from './BoardDelete';

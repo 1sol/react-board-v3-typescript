@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import 'App.css';
-import stores from '../store/modules/member';
+import stores from '../stores/modules/member';
 
 const styles = theme => ({
     hidden: {

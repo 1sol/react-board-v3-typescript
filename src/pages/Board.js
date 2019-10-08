@@ -1,6 +1,6 @@
 import React from 'react';
 import { BoardList } from '../components';
-import stores from '../store/modules/member';
+import stores from '../stores/modules/member';
 
 class Board extends React.Component {
   constructor(props) {
