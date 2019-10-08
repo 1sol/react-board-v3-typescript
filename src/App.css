@@ -140,3 +140,29 @@ div .modal-btn-wrap {
     margin: 0 auto;
     padding: 8px 8px 15px 8px;
 }
+
+.modal-input .MuiFormLabel-root {
+    font-size: 0.9rem;
+}
+
+.modal-input .MuiFormControl-root {
+    width: 100%;
+}
+
+.modal-input input[type=text] {
+    border-bottom: none;
+}
+
+.modal-input input[type=text]:focus {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.modal-input .MuiInput-underline:before,
+.modal-input .MuiInput-underline:after {
+    bottom: 15px;   
+}
+
+.modal-input label + .MuiInput-formControl {
+    margin-top: 0;
+}

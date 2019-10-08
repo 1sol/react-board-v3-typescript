@@ -92,10 +92,10 @@ class BoardAdd extends React.Component {
                 <button onClick={this.handleClickOpen} className="btn-red btn-add">+</button>
                 <Dialog open={this.state.open} onClose={this.handleClose}>
                     <DialogTitle>Member 추가</DialogTitle>
-                    <DialogContent>
-                        <TextField label="이름" type="text" name="name" value={this.state.name} onChange={this.handleValueChange} /><br/>
-                        <TextField label="직급" type="text" name="rank" value={this.state.rank} onChange={this.handleValueChange} /><br/>
-                        <TextField label="소속" type="text" name="department" value={this.state.department} onChange={this.handleValueChange} /><br/>
+                    <DialogContent className="modal-input">
+                        <TextField label="이름" type="text" name="name" value={this.state.name} onChange={this.handleValueChange} />
+                        <TextField label="직급" type="text" name="rank" value={this.state.rank} onChange={this.handleValueChange} />
+                        <TextField label="소속" type="text" name="department" value={this.state.department} onChange={this.handleValueChange} />
                     </DialogContent>
                     <DialogActions className="modal-btn-wrap">
                         <Button variant="contained" color="primary" onClick={this.handleFormSubmit}>추가</Button>
